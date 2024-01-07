@@ -1,48 +1,88 @@
-<link rel="stylesheet" href="style.css">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css"> <!-- Link to your external CSS file -->
-    <title>My Mom's Timeless Sarees</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Jyothi and Her Timeless Sarees Collection</title>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <h1>Welcome to My Mom's Timeless Sarees</h1>
-        <p>Explore the beauty of traditional sarees passed through generations.</p>
+        <div class="logo">Jyothi Timeless Sarees</div>
+        <nav>
+            <ul>
+                <li><a href="#Featured Sarees">Sarees</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#subscribe">Subscribe</a></li> 
+            </ul>
+        </nav>
     </header>
 
-    <!-- Main Content Section -->
-    <section>
+    <section id="hero">
+        <h1>Discover Timeless Beauty with My Timeless Sarees</h1>
+        <p>Explore our exquisite collection of traditional sarees.</p>
+    </section>
+    <section id="products">
+    <h2>Featured Sarees</h2>
+    
+    <div class="image-container">
+        <div class="product">
+            <img src="images/Saree1.jpeg" alt="Saree 1">
+            <h3>Saree Title 1</h3>
+            <p class="price">$99.99</p>
+            <button onclick="showLikeAnimation()">Like</button>
+            
+        </div>
+
+        <div class="product">
+            <img src="images/Saree2.jpeg" alt="Saree 2">
+            <h3>Saree Title 2</h3>
+            <p class="price">$129.99</p>
+            <button onclick="showLikeAnimation()">Like</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Saree3.jpeg" alt="Saree 3">
+            <h3>Saree Title 2</h3>
+            <p class="price">$129.99</p>
+           <button onclick="showLikeAnimation()">Like</button>
+        </div>
+
+        <!-- Repeat similar product blocks as needed -->
+        </div>
+    </section>
+
+    <section id="about">
         <h2>About Us</h2>
         <p>
-            My Mom's Timeless Sarees is dedicated to preserving and showcasing the rich heritage
-            of traditional sarees. Each saree tells a story, and we are here to share these
-            timeless pieces with you.
+            My Timeless Sarees is your one-stop destination for high-quality traditional sarees.
+            We are committed to preserving the rich cultural heritage and providing you with the finest
+            collection of timeless sarees.
         </p>
     </section>
 
-    <!-- Image Gallery Section -->
-    <section>
-        <h2>Gallery</h2>
-        <!-- Add your saree images here -->
-        <img src="images/Saree1.jpeg" alt="Saree 1">
-        <img src="images/Saree2.jpeg" alt="Saree 2">
-        <!-- Add more images as needed -->
-    </section>
-
-    <!-- Contact Section -->
-    <section>
+    <section id="contact">
         <h2>Contact Us</h2>
-        <p>If you have any inquiries, feel free to reach out to us:</p>
+        <p>If you have any questions, feel free to reach out:</p>
         <p>Email: info@mymomssarees.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+    </section>
+    <section id="subscribe">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form action="#" method="post" class="subscribe-form" onsubmit="submitForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Subscribe</button>
+        </form>
     </section>
 
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 My Mom's Timeless Sarees</p>
+        <p>&copy; 2024 MyMoms_Timeless_Sarees</p>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

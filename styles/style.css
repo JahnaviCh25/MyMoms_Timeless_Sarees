@@ -2,69 +2,154 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: url('images/saree_background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
-    text-align: center;
     padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInDown 1s ease-out;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
 }
 
 section {
     margin: 20px;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
 }
 
 h2 {
     color: #333;
 }
 
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 25%; /* Adjust the width as needed */
     margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-out;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
+.product:hover img {
+    transform: scale(1.1);
+}
+
+.product {
     text-align: center;
-    padding: 1em;
+    animation: fadeIn 1s ease-out;
+    width: 30%; /* Adjust the width as needed */
+}
+
+.price {
+    color: #009688;
+    font-weight: bold;
+}
+
+button {
+    background-color: #009688;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+    margin-bottom: 15px; 
+}
+
+button:hover {
+    background-color: #00796b;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#subscribe {
+    margin-top: 20px;
+}
+
+.subscribe-form {
+    text-align: center;
+}
+
+#subscribe form {
+    margin-top: 10px;
+}
+/* ... Your existing CSS code ... */
+
+@keyframes flyAnimation {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-50px); opacity: 0.5; }
+    100% { transform: translateY(-100px); opacity: 0; }
+}
+
+.fly-animation {
+    animation: flyAnimation 0.5s ease-out;
     position: fixed;
-    bottom: 0;
-    width: 100%;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    font-size: 2em;
+    color: #e74c3c; /* You can change the color */
 }
 
-/* Banner Styles */
-.banner {
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #f5c6cb;
-}
-
-.success-banner {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #c3e6cb;
-}
-
-/* Background Styles */
-body {
-    background-image: url('images/saree_background.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-/* Add more styles as needed */
